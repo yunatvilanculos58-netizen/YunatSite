@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f6f1;
+    color: #332c2c;
+    line-height: 1.6;
+}
+
+
+/* CABEÇALHO */
+
+header {
+    padding: 25px 8%;
+    border-bottom: 1px solid #e5ddd7;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #6d3045;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #332c2c;
+}
+
+.menu a:hover {
+    color: #8b4560;
+}
+
+
+/* INTRODUÇÃO */
+
+.blog-intro {
+    max-width: 800px;
+
+    margin: auto;
+
+    padding: 100px 20px 70px;
+
+    text-align: center;
+}
+
+.subtitulo {
+    color: #8b4560;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.blog-intro h1 {
+    font-family: Georgia, serif;
+
+    font-size: 52px;
+    font-weight: normal;
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+.blog-intro > p:last-child {
+    max-width: 600px;
+
+    margin: auto;
+
+    color: #665d5d;
+
+    font-size: 17px;
+}
+
+
+/* PUBLICAÇÕES */
+
+.publicacoes {
+    max-width: 1050px;
+
+    margin: auto;
+
+    padding: 20px 30px 100px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+/* POST */
+
+.post {
+    background-color: #eee8e0;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+}
+
+
+/* IMAGEM */
+
+.post-imagem {
+    width: 100%;
+    height: 220px;
+}
+
+.post-imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* TEXTO */
+
+.post-conteudo {
+    padding: 25px;
+}
+
+.data {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #8b4560;
+
+    margin-bottom: 10px;
+}
+
+.post h2 {
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+    font-weight: normal;
+
+    line-height: 1.2;
+
+    margin-bottom: 15px;
+}
+
+.post p:not(.data) {
+    color: #665d5d;
+
+    margin-bottom: 20px;
+}
+
+.ler {
+    color: #6d3045;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.ler:hover {
+    text-decoration: underline;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    padding: 30px;
+
+    background-color: #332c2c;
+
+    color: white;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 800px) {
+
+    nav {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .blog-intro {
+        padding: 70px 20px 50px;
+    }
+
+    .blog-intro h1 {
+        font-size: 40px;
+    }
+
+    .publicacoes {
+        grid-template-columns: 1fr;
+
+        padding: 20px;
+    }
+
+}

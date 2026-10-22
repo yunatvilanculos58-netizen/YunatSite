@@ -1,0 +1,203 @@
+/* ========================================
+   PÁGINA SOBRE MIM
+   ======================================== */
+body{
+    background-color:#f9f6f1;
+}
+header{
+    font-family: Arial, sans-serif;
+    border-bottom: 1px solid #eee8e0;
+    padding: 25px 8%;
+
+}
+
+   nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #923b5a;
+}
+
+a{
+    text-decoration:none;
+    color: inherit;
+}
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu a {
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #8b4560;
+}
+
+.subtitulo{
+    font-family: Arial, sans-serif;
+    font-style: oblique;
+    color: #8b4560;
+    font-weight: bold;
+}
+.sobre {
+    min-height: 80vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 80px;
+
+    padding: 80px 8%;
+}
+
+.sobre-imagem {
+    width: 350px;
+    height: 450px;
+
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.sobre-texto {
+    max-width: 600px;
+}
+
+.sobre-texto h1 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    font-weight: normal;
+
+    line-height: 1.15;
+
+    margin-bottom: 25px;
+}
+
+.sobre-texto p:not(.subtitulo) {
+    color: #625959;
+
+    margin-bottom: 18px;
+
+    font-size: 19px;
+}
+
+
+/* ========================================
+   FRASE
+   ======================================== */
+
+.frase {
+    padding: 80px 20%;
+
+    background-color: #eee8e0;
+
+    text-align: center;
+}
+
+.frase p {
+    font-family: Georgia, serif;
+
+    font-size: 32px;
+
+    font-style: italic;
+
+    color: #6d3045;
+}
+
+
+/* ========================================
+   A MINHA ESCRITA
+   ======================================== */
+
+.escrita {
+    padding: 100px 20%;
+
+    text-align: center;
+}
+
+.escrita h2 {
+    font-family: Georgia, serif;
+
+    font-size: 40px;
+
+    font-weight: normal;
+
+    margin-bottom: 20px;
+}
+
+.escrita p:not(.subtitulo) {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: #625959;
+}
+
+
+/* ========================================
+   SOBRE MIM NO TELEMÓVEL
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    .sobre {
+        flex-direction: column;
+
+        padding: 60px 20px;
+
+        gap: 40px;
+
+        text-align: center;
+    }
+
+    .sobre-imagem {
+        width: 280px;
+        height: 360px;
+    }
+
+    .sobre-texto h1 {
+        font-size: 40px;
+    }
+
+    .frase {
+        padding: 60px 20px;
+    }
+
+    .frase p {
+        font-size: 25px;
+    }
+
+    .escrita {
+        padding: 70px 20px;
+    }
+
+    .escrita h2 {
+        font-size: 32px;
+    }
+
+}
+
+footer {
+    background-color: #332c2c;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+}

@@ -1,0 +1,371 @@
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f6f1;
+    color: #332c2c;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ========================================
+   CABEÇALHO
+   ======================================== */
+
+header {
+    padding: 25px 8%;
+    background-color: #f9f6f1;
+    border-bottom: 1px solid #e8dfd7;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #923b5a;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.menu a {
+    font-size: 15px;
+    color: #332c2c;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #8b4560;
+}
+
+
+/* ========================================
+   TÍTULO DA PÁGINA
+   ======================================== */
+
+.titulo-livros {
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 90px 20px 70px;
+
+    text-align: center;
+}
+
+.subtitulo {
+    color: #8b4560;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.titulo-livros h1 {
+    font-family: Georgia, serif;
+
+    font-size: 52px;
+
+    font-weight: normal;
+
+    line-height: 1.15;
+
+    margin-bottom: 25px;
+}
+
+.titulo-livros > p:not(.subtitulo) {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #625959;
+
+    font-size: 17px;
+}
+
+
+/* ========================================
+   LIVROS
+   ======================================== */
+
+.livros {
+    padding: 20px 8% 100px;
+}
+
+
+/* ========================================
+   CARTÃO DO LIVRO
+   ======================================== */
+
+.livro-card {
+    max-width: 1100px;
+
+    margin: 0 auto 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 70px;
+
+    padding: 50px;
+
+    background-color: #eee8e0;
+}
+
+
+/* Segundo livro */
+
+.livro-card.invertido {
+    flex-direction: row-reverse;
+
+    background-color: #e9dfe4;
+}
+
+
+/* ========================================
+   CAPA
+   ======================================== */
+
+.livro-capa {
+    width: 300px;
+
+    height: 430px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.livro-capa img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.livro-capa:hover img {
+    transform: scale(1.03);
+}
+
+
+/* ========================================
+   INFORMAÇÕES
+   ======================================== */
+
+.livro-info {
+    max-width: 500px;
+}
+
+.categoria {
+    color: #8b4560;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+.livro-info h2 {
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    font-weight: normal;
+
+    line-height: 1.15;
+
+    margin-bottom: 25px;
+}
+
+.livro-info p:not(.categoria) {
+    color: #625959;
+
+    margin-bottom: 18px;
+
+    font-size: 16px;
+}
+
+
+/* ========================================
+   BOTÃO
+   ======================================== */
+
+.botao {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 13px 25px;
+
+    background-color: #6d3045;
+
+    color: white;
+
+    border-radius: 4px;
+
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #4f2232;
+}
+
+
+/* ========================================
+   FRASE FINAL
+   ======================================== */
+
+.frase-final {
+    padding: 40px 20%;
+
+    background-color: #463d3d;
+
+    text-align: center;
+}
+
+.frase-final p {
+    max-width: 800px;
+
+    margin: auto;
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    font-style: italic;
+
+    color: #f9f6f1;
+}
+
+
+/* ========================================
+   RODAPÉ
+   ======================================== */
+
+footer {
+    padding: 20px;
+
+    background-color: #251f20;
+
+    color: white;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .menu {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .titulo-livros {
+        padding: 60px 20px 50px;
+    }
+
+    .titulo-livros h1 {
+        font-size: 40px;
+    }
+
+
+    .livros {
+        padding: 20px 20px 60px;
+    }
+
+
+    .livro-card,
+    .livro-card.invertido {
+        flex-direction: column;
+
+        gap: 40px;
+
+        padding: 35px 25px;
+
+        text-align: center;
+    }
+
+
+    .livro-capa {
+        width: 250px;
+
+        height: 360px;
+    }
+
+
+    .livro-info {
+        max-width: 100%;
+    }
+
+
+    .livro-info h2 {
+        font-size: 34px;
+    }
+
+
+    .frase-final {
+        padding: 50px 16px;
+    }
+
+    .frase-final p {
+        font-size: 16px;
+    }
+
+}

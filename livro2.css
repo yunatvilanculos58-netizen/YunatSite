@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f3ef;
+    color: #2f2929;
+    line-height: 1.7;
+}
+
+
+/* CABEÇALHO */
+
+header {
+    padding: 25px 8%;
+    border-bottom: 1px solid #e3d9d3;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #6d3045;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #332c2c;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #7b263f;
+}
+
+
+/* DESTAQUE */
+
+.livro-destaque {
+    max-width: 1100px;
+    margin: auto;
+
+    padding: 90px 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+
+/* CAPA */
+
+.capa {
+    width: 330px;
+    height: 470px;
+
+    flex-shrink: 0;
+
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+}
+
+.capa img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* INFORMAÇÃO */
+
+.informacao {
+    max-width: 580px;
+}
+
+.categoria,
+.subtitulo {
+    color: #7b263f;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.informacao h1 {
+    font-family: Georgia, serif;
+
+    font-size: 62px;
+    font-weight: normal;
+
+    line-height: 1.05;
+
+    color: #2f2929;
+
+    margin-bottom: 20px;
+}
+
+.informacao .frase {
+    font-family: Georgia, serif;
+
+    font-size: 23px;
+    font-style: italic;
+
+    color: #7b263f;
+
+    margin-bottom: 25px;
+}
+
+.informacao p:not(.categoria):not(.frase) {
+    color: #5f5656;
+
+    margin-bottom: 17px;
+}
+
+
+/* BOTÃO */
+
+.botao {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 13px 27px;
+
+    background-color: #6d3045;
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #481d2c;
+}
+
+
+/* SOBRE O LIVRO */
+
+.sobre-livro {
+    padding: 100px 20%;
+
+    background-color: #e9e1dd;
+
+    text-align: center;
+}
+
+.sobre-livro h2 {
+    max-width: 850px;
+
+    margin: 0 auto 25px;
+
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+    font-weight: normal;
+
+    line-height: 1.2;
+}
+
+.sobre-livro p:not(.subtitulo) {
+    max-width: 700px;
+
+    margin: 0 auto 18px;
+
+    color: #5f5656;
+}
+
+
+/* ARIANNA */
+
+.personagem {
+    padding: 100px 20%;
+
+    background-color: #332c2c;
+
+    color: #f7f3ef;
+}
+
+.personagem > div {
+    max-width: 700px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.personagem .subtitulo {
+    color: #c994a6;
+}
+
+.personagem h2 {
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+    font-weight: normal;
+
+    margin-bottom: 25px;
+}
+
+.personagem p:not(.subtitulo) {
+    color: #ddd1d1;
+
+    margin-bottom: 18px;
+}
+
+
+/* FRASE */
+
+.frase-final {
+    padding: 100px 20%;
+
+    text-align: center;
+
+    background-color: #f7f3ef;
+}
+
+.frase-final p {
+    font-family: Georgia, serif;
+
+    font-size: 36px;
+    font-style: italic;
+
+    color: #6d3045;
+}
+
+
+/* ESTADO */
+
+.estado {
+    padding: 80px 20%;
+
+    text-align: center;
+
+    background-color: #e5d5db;
+}
+
+.estado h2 {
+    font-family: Georgia, serif;
+
+    font-size: 38px;
+    font-weight: normal;
+
+    margin-bottom: 15px;
+}
+
+.estado p:last-child {
+    max-width: 600px;
+
+    margin: auto;
+
+    color: #5f5656;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    padding: 30px;
+
+    background-color: #251f20;
+
+    color: white;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .livro-destaque {
+        flex-direction: column;
+
+        padding: 60px 20px;
+
+        text-align: center;
+
+        gap: 45px;
+    }
+
+    .capa {
+        width: 260px;
+        height: 370px;
+    }
+
+    .informacao h1 {
+        font-size: 48px;
+    }
+
+    .sobre-livro,
+    .personagem,
+    .estado {
+        padding: 70px 20px;
+    }
+
+    .sobre-livro h2,
+    .personagem h2 {
+        font-size: 34px;
+    }
+
+    .frase-final {
+        padding: 70px 20px;
+    }
+
+    .frase-final p {
+        font-size: 28px;
+    }
+
+}
